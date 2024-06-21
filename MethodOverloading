@@ -1,0 +1,70 @@
+class Developer {
+    // Method for studying
+    public void doStudy() {
+        System.out.println("Developer is studying");
+    }
+    
+    // Method for doing projects
+    public void doProjects() {
+        System.out.println("Developer is doing projects");
+    }
+}
+
+class FrontEndDeveloper extends Developer {
+    // Overriding the study method for front-end developers
+    @Override
+    public void doStudy() {
+        System.out.println("Front End Developer is studying HTML & CSS");
+    }
+    
+    // Overriding the project method for front-end developers
+    @Override
+    public void doProjects() {
+        System.out.println("Front End Developer is doing front end project");
+    }
+}
+
+class BackEndDeveloper extends Developer {
+    // Overriding the study method for back-end developers
+    @Override
+    public void doStudy() {
+        System.out.println("Back End Developer is studying Java");
+    }
+    
+    // Overriding the project method for back-end developers
+    @Override
+    public void doProjects() {
+        System.out.println("Back End Developer is doing back end project");
+    }
+}
+
+public class MethodOverriding {
+    public static void main(String[] args) {
+        // Creating an instance of Developer
+        Developer dev = new Developer();
+        
+        // Creating an instance of FrontEndDeveloper
+        FrontEndDeveloper fe = new FrontEndDeveloper();
+        
+        // Creating an instance of BackEndDeveloper
+        BackEndDeveloper be = new BackEndDeveloper();
+        
+        // Calling methods on Developer instance
+        dev.doStudy();
+        dev.doProjects();
+        
+        // Separator
+        System.out.println("------------------------------");
+        
+        // Calling overridden methods on FrontEndDeveloper instance
+        fe.doStudy();
+        fe.doProjects();
+        
+        // Separator
+        System.out.println("------------------------------");
+        
+        // Calling overridden methods on BackEndDeveloper instance
+        be.doStudy();
+        be.doProjects();
+    }
+}
